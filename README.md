@@ -1,8 +1,7 @@
 # retourograf
 
 retourograf is a simple graphical user interface (GUI) application that enables you to capture photos using a [Blink Camera System](https://github.com/fronzbot/blinkpy) for personal use. This
-application uses
-Java and a Python script to interact with a Blink API provided by [fronzbot](https://github.com/fronzbot).
+application uses Java and a Python script to interact with a Blink API provided by [fronzbot](https://github.com/fronzbot).
 
 <img width="75%" src="img.png" alt="Your image title"/>
 
@@ -10,7 +9,7 @@ Java and a Python script to interact with a Blink API provided by [fronzbot](htt
 
 - Enter a photo title using an easy-to-use GUI.
 - Automatically send requests to the Blink API to capture and download photos.
-- Exact file name matching to prevent duplicate file names
+- Exact file name matching to prevent duplicate file names.
 - Display downloaded photos in a within the set folder.
 
 ## Technology Stack
@@ -30,10 +29,11 @@ Java and a Python script to interact with a Blink API provided by [fronzbot](htt
 
 ## Usage
 
-1. Clone the repository: `git clone https://github.com/soeguet/PhotoCaptureGUI.git`
+1. Clone the repository: `git clone https://github.com/soeguet/PhotoCaptureGUI.git`.
 2. Open the project in your favorite IDE.
-3. Run the `GuiImpl` class to launch the application.
-4. Enter a title for your photo in the text field and click "Take Photo".
+3. Optional: set picture folder path and credentials in python script (you will need to set up your venv)
+4. Start the project with ```gradle run``` in the terminal.
+5. Enter a title for your photo in the text field and click "Take Photo" (will only work if step 3 was set up).
 
 The photo will be captured and downloaded into the predefined folder. The application will then display the photo.
 
