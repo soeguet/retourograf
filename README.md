@@ -4,7 +4,7 @@ retourograf is a simple graphical user interface (GUI) application that enables 
 application uses
 Java and a Python script to interact with a Blink API provided by [fronzbot](https://github.com/fronzbot).
 
-<img src="img.png" alt="Your image title"/>
+<img width="75%" src="img.png" alt="Your image title"/>
 
 ## Features
 
@@ -50,15 +50,3 @@ Contributions, issues, and feature requests are welcome! Feel free to check [iss
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-<style>
-img
-{
-    display:block;
-    float:none;
-    margin-left:auto;
-    margin-right:auto;
-    width:60%;
-    max-width: 850px;
-}
-</style>
