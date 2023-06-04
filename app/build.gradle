@@ -1,0 +1,47 @@
+plugins {
+    id 'application'
+}
+sourceCompatibility = '17'
+targetCompatibility = '17'
+mainClassName = 'com.soeguet.Main'
+
+compileJava.options.encoding = 'UTF-8'
+group = 'com.soeguet'
+version = ''
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    mainClass = 'com.soeguet.Main'
+}
+
+tasks.register('copyResources', Copy) {
+    from 'resources'
+    into 'build/resources'
+}
+jar.dependsOn(copyResources)
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+}
+
+dependencies {
+    implementation 'com.miglayout:miglayout-swing:11.1'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'com.formdev:flatlaf:3.1.1'
+
+    testImplementation platform('org.junit:junit-bom:5.9.3')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
